@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/angular.min.js"></script>
+    <title></title>
+</head>
+<body>
+
+<div class="container" ng-app="myTable">
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading">Item heading</h4>
+
+            <p class="list-group-item-text">Content goes here</p>
+        </a>
+    </div>
+    <div class="row" style="margin: 10px;width: 600px" >
+
+        <div class="row">
+            <table class="table table-bordered table-hover" ng-controller="tableController">
+                <thead>
+                    <tr class="text-capitalize text-center">
+                        <th class="text-center" ng-repeat="x in titile">{{x}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in tableData">
+                        <td class="text-center">{{d.employ}}</td>
+                        <td class="text-center">{{d.age}}</td>
+                        <td class="text-center">{{d.pthone}}</td>
+                        <td class="text-center">{{d.emial}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row pull-right" >
+            <ul class="pagination pagination-sm" style="margin: 0px">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script src="js/table.js"></script>
+</body>
+</html>
